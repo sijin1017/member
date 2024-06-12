@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.mysite.memberMapper">
+
+	<!--
+	<insert id="registerMember" parameterType="RegisterRequest">
+		INSERT INTO simpleBoard(bNo,bTitle, bWriter, bContent)
+		VALUES(seq_bno.nextVal, #{bTitle}, #{bWriter}, #{bContent})
+	</insert>
+
+	<select id="getList" resultType="Board">
+		SELECT * FROM simpleboard ORDER BY bno DESC
+	</select>
+	-->
+	<select id="selectAll" resultType="Member">
+		SELECT * FROM boot_mem
+	</select>
+	
+	<insert id="insertData" parameterType="Member">
+		INSERT INTO boot_mem(num, name, addr)
+		VALUES(#{num}, #{name}, #{addr})
+	</insert>
+	
+	<delete id="deleteData" parameterType="int">
+		DELETE FROM boot_mem WHERE num = #{num}
+	</delete>
+</mapper>

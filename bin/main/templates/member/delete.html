@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>회원 삭제</h1>
+	<form method="post" action="/member/delete">
+		<input type="hidden" name="num" th:value="${num}"/>
+		<input type="submit" value="삭제"/>
+	</form>
+	
+	<a href="/member/list">취소</a>
+
+</body>
+</html>

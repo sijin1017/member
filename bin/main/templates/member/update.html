@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>회원 정보 수정</h1>
+	
+	<form method="post" action="/member/update">
+		<input type="hidden" name="num" th:value="${num}"/>
+		번호 : <input type="text" name="num"/><br>
+		이름 : <input type="text" name="name"/><br>
+		주소 : <input type="text" name="addr"/><br>
+		<input type="submit" value="수정"/>
+		
+		<a href="/member/list">취소</a>
+	</form>
+</body>
+</html>
